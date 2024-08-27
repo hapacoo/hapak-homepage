@@ -1,4 +1,4 @@
-import { WrapperBurger } from "./BurgerStyle";
+import { BurgerBox, WrapperBurger } from "./BurgerStyle";
 
 interface IBurgerProps {
     open: boolean;
@@ -8,10 +8,12 @@ interface IBurgerProps {
 const BurgerIcon :React.FC<IBurgerProps> = ({open, setOpen}) => {
 
     return (
-        <WrapperBurger open={open} onClick={()=>setOpen(!open)}>
-            <div />
-            <div />
-            <div />
+        <WrapperBurger>
+            <BurgerBox open={open} onClick={()=>setOpen(!open)}>
+                <div />
+                <div />
+                <div />
+            </BurgerBox>
         </WrapperBurger>
     )
 }

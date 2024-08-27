@@ -1,29 +1,43 @@
-//프롭스 드릴링 
+//프롭스 드릴링
 
-import React from "react"
-import { useMoveToCharacter } from "../../../hooks/useMoveToCharacter"
-import { WrapperMenu } from "./MenuStyle"
-import { NAGICATIONS_HAPAK } from "../../../../../../pages/hapak"
+import React, { useMemo } from 'react';
+import { WrapperMenu } from './MenuStyle';
+import { useMoveToPage } from '../../../hooks/useMoveToPage';
+import { NAVIGATION_HAPAK } from '../../../../../../pages/hapak';
+import { useRecoilValue } from 'recoil';
+import { isWhoState } from '../../../../../commons/stores';
+import { NAVIGATION_HAPACOO } from '../../../../../../pages/hapacoo';
+import { NAVIGATION_HAWHY } from '../../../../../../pages/hawhy';
+import { INaviMenuProps, NavigationType } from '../../../../../commons/types';
 
-interface INaviMenuProps {
-    open: boolean
-    isAdmin?:boolean
-}
+const NavigationMenu: React.FC<INaviMenuProps> = ({
+  open,
+  isAdmin = false,
+}) => {
+  const isWho = useRecoilValue(isWhoState);
 
-const NavigationMenu: React.FC<INaviMenuProps> = ({open, isAdmin = false}) =>{
-    const {onClickMoveToCharacter} = useMoveToCharacter()
+  const { onClickMoveToPage } = useMoveToPage();
 
-    const menus = NAGICATIONS_HAPAK 
+  const menus = useMemo<NavigationType[]>(() => {
+    if (isWho === 'HP') {
+      return NAVIGATION_HAPAK;
+    } else if (isWho === 'HPC') {
+      return NAVIGATION_HAPACOO;
+    } else if (isWho === 'HW') {
+      return NAVIGATION_HAWHY;
+    }
+    return [];
+  }, [isWho]);
 
-return (
+  return (
     <WrapperMenu open={open}>
-        {menus.map((el)=>(
-            <a key={el.name} onClick={onClickMoveToCharacter(el.page)}>
-                {el.name}
-            </a>
-        ))}
+      {menus.map((el) => (
+        <a key={el.name} onClick={onClickMoveToPage(el.page)}>
+          {el.name}
+        </a>
+      ))}
     </WrapperMenu>
-    )
-}
+  );
+};
 
-export default NavigationMenu
+export default NavigationMenu;

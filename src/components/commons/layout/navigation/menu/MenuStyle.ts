@@ -8,8 +8,8 @@ export const WrapperMenu = styled.nav<IStyledMenuProps>`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: blue;
-    transform: ${({open})=>open ? 'translateX(0)' : 'translateX(-100%)'};
+    background-color: black;
+    transform: ${({open})=>open ? 'translateX(90px)' : 'translateX(-100%)'};
     height: 100vh;
     text-align: left;
     padding: 2rem;
@@ -20,6 +20,7 @@ export const WrapperMenu = styled.nav<IStyledMenuProps>`
 
     @media (max-width: 576px){
         width: 100%;
+        translate: -90px;
     }
 
     a {

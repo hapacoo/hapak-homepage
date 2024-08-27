@@ -1,16 +1,20 @@
-import { Global } from "@emotion/react";
-import type { AppProps } from "next/app";
-import { globalStyles } from "../src/commons/styles/globalStyles";
-import Layout from "../src/components/commons/layout";
+import { Global } from '@emotion/react';
+import type { AppProps } from 'next/app';
+import { globalStyles } from '../src/commons/styles/globalStyles';
+import Layout from '../src/components/commons/layout';
+import { RecoilRoot } from 'recoil';
 
 export default function App({ Component, pageProps }: AppProps) {
-  return(
+  return (
     <>
-      <Global styles={globalStyles} />
-      <Layout>
-        <Component {...pageProps} />;
-
-      </Layout>
+      <RecoilRoot>
+        <>
+          <Global styles={globalStyles} />
+          <Layout>
+            <Component {...pageProps} />;
+          </Layout>
+        </>
+      </RecoilRoot>
     </>
-  )
+  );
 }
