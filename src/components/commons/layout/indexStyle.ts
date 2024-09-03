@@ -2,10 +2,11 @@ import styled from '@emotion/styled';
 
 export const LayoutWrapper = styled.div`
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
 
   width: 100vw;
   height: 100vh;
+  background-color: blue;
 `;
 export const LayoutBodyWrapper = styled.div`
   display: flex;

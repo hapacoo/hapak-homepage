@@ -1,19 +1,14 @@
-//프롭스 드릴링
-
-import React, { useMemo } from 'react';
-import { WrapperMenu } from './MenuStyle';
-import { useMoveToPage } from '../../../hooks/useMoveToPage';
-import { NAVIGATION_HAPAK } from '../../../../../../pages/hapak';
 import { useRecoilValue } from 'recoil';
+import { IMenuWorksProps, NavigationType } from '../../../../../commons/types';
 import { isWhoState } from '../../../../../commons/stores';
+import { useMoveToPage } from '../../../hooks/useMoveToPage';
+import { useMemo } from 'react';
+import { NAVIGATION_HAPAK } from '../../../../../../pages/hapak';
 import { NAVIGATION_HAPACOO } from '../../../../../../pages/hapacoo';
 import { NAVIGATION_HAWHY } from '../../../../../../pages/hawhy';
-import { INaviMenuProps, NavigationType } from '../../../../../commons/types';
+import { WrapperMenu } from './MenuWorksStyle';
 
-const NavigationMenu: React.FC<INaviMenuProps> = ({
-  open,
-  isAdmin = false,
-}) => {
+const MenuWorks: React.FC<IMenuWorksProps> = ({ open, isAdmin = false }) => {
   const isWho = useRecoilValue(isWhoState);
 
   const { onClickMoveToPage } = useMoveToPage();
@@ -30,7 +25,7 @@ const NavigationMenu: React.FC<INaviMenuProps> = ({
   }, [isWho]);
 
   return (
-    <WrapperMenu open={open}>
+    <WrapperMenu open={open} isWho={isWho}>
       {menus.map((el) => (
         <a key={el.name} onClick={onClickMoveToPage(el.page)}>
           {el.name}
@@ -40,4 +35,4 @@ const NavigationMenu: React.FC<INaviMenuProps> = ({
   );
 };
 
-export default NavigationMenu;
+export default MenuWorks;
