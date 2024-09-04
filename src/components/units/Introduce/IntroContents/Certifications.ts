@@ -1,4 +1,4 @@
-import { ListItemType } from '../ContentsTypes';
+import { ListItemType } from '../../../../commons/types';
 
 export const CERTIFICATION_LIST: ListItemType[] = [
   { date: '2023', title: 'SW', detail: '1' },

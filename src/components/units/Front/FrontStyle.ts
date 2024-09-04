@@ -12,7 +12,6 @@ export const SliderWrapper = styled.div`
 export const SliderImage = styled.img`
   width: 100vw;
   height: 100vh;
-  background: #364d79;
   object-fit: cover;
   /* opacity: 0.8; */
 `;

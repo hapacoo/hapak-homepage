@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { IStyledMenuWorksProps } from '../../../../commons/types';
+import { IMenuWorksStyleProps } from '../../../../commons/types';
 
 export const HeaderWrapper = styled.div`
   position: fixed;
@@ -9,8 +9,9 @@ export const HeaderWrapper = styled.div`
   top: 0;
   left: 0;
   width: 100vw;
+  height: 90px;
   padding: 15px;
-  background-color: blue;
+  background-color: transparent;
   z-index: 1000;
 `;
 
@@ -18,19 +19,24 @@ export const HeaderDiv = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  background-color: transparent;
 `;
 
-export const HeaderButton = styled.button<IStyledMenuWorksProps>`
+export const HeaderButton = styled.button<IMenuWorksStyleProps>`
   padding: 0;
   margin-right: 10px;
   color: #fff;
-  font-size: 40px;
+  font-size: 3rem;
   font-weight: 900;
-  border-color: orange;
+  -webkit-text-stroke: black 2px;
   background-color: transparent;
+  border-style: none;
   z-index: 50;
-  /* border-color: transparent; */
   cursor: pointer;
+
+  :hover {
+    color: #000;
+  }
 `;
 
 export const CharacterButton = styled.button`
@@ -43,7 +49,6 @@ export const CharacterButton = styled.button`
   text-align: center;
   color: #000;
   background-color: #fff;
-  border-color: #fff;
   border-style: none;
   cursor: pointer;
 `;

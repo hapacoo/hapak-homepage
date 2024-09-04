@@ -1,4 +1,4 @@
-import { ListItemType } from '../ContentsTypes';
+import { ListItemType } from '../../../../commons/types';
 
 export const EDUCATION_LIST: ListItemType[] = [
   {

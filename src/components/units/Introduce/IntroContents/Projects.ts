@@ -1,4 +1,4 @@
-import { ListItemType } from '../ContentsTypes';
+import { ListItemType } from '../../../../commons/types';
 
 export const PROJECT_LIST: ListItemType[] = [
   {

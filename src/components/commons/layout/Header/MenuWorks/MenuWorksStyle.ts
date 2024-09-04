@@ -8,9 +8,9 @@ export const WrapperMenu = styled.nav<IMenuWorksProps>`
   background-color: transparent;
   transform: ${({ open }) =>
     open ? 'translateX(calc(100vw - 350px))' : 'translateX(100vw)'};
-  height: 100vh;
+  height: 700px;
   text-align: left;
-  padding: 2rem;
+  padding: 1rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -22,15 +22,24 @@ export const WrapperMenu = styled.nav<IMenuWorksProps>`
   }
 
   a {
-    font-size: 2rem;
+    font-size: 3rem;
     text-transform: uppercase;
-    padding: 2rem 0;
-    font-weight: bold;
+    padding: 1rem 0;
+    font-weight: 800;
     letter-spacing: 0.5rem;
     color: #ffffff;
+    -webkit-text-stroke: black 2px;
+
+    background-color: transparent;
     text-decoration: none;
-    transition: color 0.3s linear;
     cursor: pointer;
+
+    :hover {
+      color: #000;
+      text-shadow:
+        0px 0px 10px #a6f27d,
+        0px 0px 15px #a6f27d;
+    }
 
     @media (max-width: 576px) {
       font-size: 1.5rem;

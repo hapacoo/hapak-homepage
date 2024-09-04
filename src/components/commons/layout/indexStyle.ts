@@ -2,11 +2,9 @@ import styled from '@emotion/styled';
 
 export const LayoutWrapper = styled.div`
   display: flex;
-  flex-direction: row;
-
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
-  background-color: blue;
 `;
 export const LayoutBodyWrapper = styled.div`
   display: flex;
@@ -15,7 +13,7 @@ export const LayoutBodyWrapper = styled.div`
   margin: 0;
   padding: 0;
   width: 100vw;
-  height: 100vw;
+  height: calc(100vh - 150px);
 `;
 export const LayoutBody = styled.div`
   /* display: flex;

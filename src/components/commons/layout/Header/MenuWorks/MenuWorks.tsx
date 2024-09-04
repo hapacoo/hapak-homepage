@@ -3,9 +3,9 @@ import { IMenuWorksProps, NavigationType } from '../../../../../commons/types';
 import { isWhoState } from '../../../../../commons/stores';
 import { useMoveToPage } from '../../../hooks/useMoveToPage';
 import { useMemo } from 'react';
-import { NAVIGATION_HAPAK } from '../../../../../../pages/hapak';
-import { NAVIGATION_HAPACOO } from '../../../../../../pages/hapacoo';
-import { NAVIGATION_HAWHY } from '../../../../../../pages/hawhy';
+import { NAVIGATION_HAPAK } from '../../../../../../pages/HA_PAK';
+import { NAVIGATION_HAPACOO } from '../../../../../../pages/HAPACOO';
+import { NAVIGATION_HAWHY } from '../../../../../../pages/HAWHY';
 import { WrapperMenu } from './MenuWorksStyle';
 
 const MenuWorks: React.FC<IMenuWorksProps> = ({ open, isAdmin = false }) => {
@@ -14,11 +14,11 @@ const MenuWorks: React.FC<IMenuWorksProps> = ({ open, isAdmin = false }) => {
   const { onClickMoveToPage } = useMoveToPage();
 
   const menus = useMemo<NavigationType[]>(() => {
-    if (isWho === 'HP') {
+    if (isWho === 'HA_PAK') {
       return NAVIGATION_HAPAK;
-    } else if (isWho === 'HPC') {
+    } else if (isWho === 'HAPACOO') {
       return NAVIGATION_HAPACOO;
-    } else if (isWho === 'HW') {
+    } else if (isWho === 'HAWHY') {
       return NAVIGATION_HAWHY;
     }
     return [];
