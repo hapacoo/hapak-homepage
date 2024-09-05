@@ -36,6 +36,9 @@ export const HeaderButton = styled.button<IMenuWorksStyleProps>`
 
   :hover {
     color: #000;
+    text-shadow:
+      0px 0px 10px #a6f27d,
+      0px 0px 15px #a6f27d;
   }
 `;
 

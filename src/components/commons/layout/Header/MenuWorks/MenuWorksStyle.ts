@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
-import { IMenuWorksProps } from '../../../../../commons/types';
+import { IWrapperMenuProps } from '../../../../../commons/types';
 
-export const WrapperMenu = styled.nav<IMenuWorksProps>`
+export const WrapperMenu = styled.nav<IWrapperMenuProps>`
   display: flex;
   flex-direction: column;
   justify-content: center;

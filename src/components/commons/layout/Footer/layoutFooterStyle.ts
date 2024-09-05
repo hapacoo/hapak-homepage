@@ -4,11 +4,13 @@ export const FooterWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: flex-end;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100px;
   padding: 15px;
+  margin-top: 50px;
   background-color: transparent;
 `;
 export const FooterDiv = styled.div`
@@ -31,7 +33,10 @@ export const FooterA = styled.a`
 
   cursor: pointer;
 
-  &:hover {
+  :hover {
     color: #000;
+    text-shadow:
+      0px 0px 10px #a6f27d,
+      0px 0px 15px #a6f27d;
   }
 `;

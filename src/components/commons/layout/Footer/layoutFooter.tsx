@@ -16,6 +16,17 @@ const LayoutFooter = () => {
     }
   };
 
+  const getInstaAddress = () => {
+    switch (isWho) {
+      case 'HA_PAK':
+        return 'hawhy__';
+      case 'HAPACOO':
+        return 'hapacoo';
+      case 'HAWHY':
+        return 'hapacoo.pt';
+    }
+  };
+
   return (
     <FooterWrapper>
       <FooterDiv>
@@ -24,6 +35,14 @@ const LayoutFooter = () => {
           {getEmailAddress()}
         </FooterA>
       </FooterDiv>
+
+      <FooterA
+        href={`https://www.instagram.com/${getInstaAddress()}/`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        INSTAGRAM
+      </FooterA>
     </FooterWrapper>
   );
 };

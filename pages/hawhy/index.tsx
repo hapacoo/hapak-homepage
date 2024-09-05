@@ -3,16 +3,18 @@ import { isWhoState } from '../../src/commons/stores';
 import { NavigationType } from '../../src/commons/types';
 
 export const NAVIGATION_HAWHY: NavigationType[] = [
-  { name: 'INTRODUCE', page: '/HAWHY/infomation' },
-  // { name: 'INSTALLATION', page: '/HAWHY/HW-skill' },
-  { name: 'CERAMIC', page: '/HAWHY/project' },
-  { name: 'VIDEO', page: '/HAWHY/web' },
-  { name: 'WEB-ART', page: '/HAWHY/webGL' },
-  { name: 'CONTACT', page: '/HAWHY/contact' },
+  { name: 'PROJECT', page: '/HAWHY/project' },
+  { name: 'WEBSITE', page: '/HAWHY/website' },
+  { name: 'WEB-GL', page: '/HAWHY/webGL' },
 ];
 
 export default function HawhyPage(): JSX.Element {
   const [isWho, setIsWho] = useRecoilState(isWhoState);
   setIsWho('HAWHY');
-  return;
+  return (
+    <>
+      <div> cf======================================</div>
+      <button>0000</button>
+    </>
+  );
 }

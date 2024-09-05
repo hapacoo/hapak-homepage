@@ -2,8 +2,12 @@ import Masonry from 'react-masonry-css';
 
 export interface IMenuWorksProps {
   open: boolean;
-  isWho?: string;
-  isAdmin?: boolean;
+  setOpen: (isOpen: boolean) => void;
+}
+
+export interface IWrapperMenuProps {
+  open: boolean;
+  isWho: string;
 }
 
 export type NavigationType = {

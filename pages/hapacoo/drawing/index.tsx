@@ -1,27 +1,15 @@
-import ContentContainer from '../../../src/components/units/Content/ContentContainer';
+import { IMasonryItem } from '../../../src/commons/types';
+import MasonryContainer from '../../../src/components/units/Masonry/Mansonry';
 
 export default function HPCDrawingPage() {
-  const drawing = [
-    {
-      title: 'test',
-      contet: 'sdfsdfsd',
-      images: [
-        '/image/hapak/sculpture/2013/2013-lienlienlien-3.webp',
-        '/image/hapak/sculpture/2013/2013-lienlienlien-3.webp',
-        '/image/hapak/sculpture/2013/2013-lienlienlien-3.webp',
-      ],
-    },
-  ];
-  return (
-    <div style={{ paddingTop: '150px' }}>
-      {drawing.map((group, index) => (
-        <ContentContainer
-          key={index}
-          title={group.title}
-          content={group.contet}
-          images={group.images}
-        />
-      ))}
-    </div>
-  );
+  const totalImages = 144;
+
+  const generateItems = (): IMasonryItem[] => {
+    return Array.from({ length: totalImages }, (_, index) => ({
+      imageLocation: `/image/hapacoo/drawing/${index}.webp`,
+    }));
+  };
+  const items = generateItems();
+
+  return <MasonryContainer items={items} />;
 }

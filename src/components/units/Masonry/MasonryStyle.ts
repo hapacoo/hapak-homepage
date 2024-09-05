@@ -3,6 +3,7 @@ import Masonry from 'react-masonry-css';
 
 export const MasonryWrapper = styled.div`
   padding: 1rem;
+  padding-top: 80px;
 `;
 export const StyledMasonry = styled(Masonry)`
   display: flex;

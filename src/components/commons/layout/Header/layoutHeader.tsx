@@ -10,6 +10,7 @@ import MenuWorks from './MenuWorks/MenuWorks';
 import { useRouter } from 'next/router';
 import { useRecoilValue } from 'recoil';
 import { isWhoState } from '../../../../commons/stores';
+import MenuWhoButton from './MenuWho/MenuWho';
 
 const LayoutHeader = () => {
   const router = useRouter();
@@ -38,8 +39,8 @@ const LayoutHeader = () => {
           <HeaderButton open={open} onClick={() => setOpen(!open)}>
             WORKS
           </HeaderButton>
-          <MenuWorks open={open} />
-          <CharacterButton>ME</CharacterButton>
+          <MenuWorks open={open} setOpen={setOpen} />
+          <MenuWhoButton />
         </HeaderDiv>
       </HeaderWrapper>
     </>

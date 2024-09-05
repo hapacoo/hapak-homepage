@@ -3,12 +3,9 @@ import { isWhoState } from '../../src/commons/stores';
 import { NavigationType } from '../../src/commons/types';
 
 export const NAVIGATION_HAPACOO: NavigationType[] = [
-  { name: 'INTRODUCE', page: '/HAPACOO/infomation' },
   { name: 'DRAWING', page: '/HAPACOO/drawing' },
-  // { name: 'STORY', page: '/HAPACOO/' },
-  { name: 'PICTURE', page: '/HAPACOO/picture' },
+  { name: 'PHOTO', page: '/HAPACOO/photo' },
   { name: 'TATTOO', page: '/HAPACOO/tattoo' },
-  { name: 'CONTACT', page: '/HAPACOO/contact' },
 ];
 
 export default function HapacooPage(): JSX.Element {
