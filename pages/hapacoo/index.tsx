@@ -4,6 +4,7 @@ import { NavigationType } from '../../src/commons/types';
 
 export const NAVIGATION_HAPACOO: NavigationType[] = [
   { name: 'DRAWING', page: '/HAPACOO/drawing' },
+  { name: 'ILLUST', page: '/HAPACOO/illustration' },
   { name: 'PHOTO', page: '/HAPACOO/photo' },
   { name: 'TATTOO', page: '/HAPACOO/tattoo' },
 ];
