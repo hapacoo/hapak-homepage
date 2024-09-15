@@ -51,3 +51,20 @@ export interface IMasonryItem {
 export interface IMasonryContainerProps {
   items: IMasonryItem[];
 }
+
+export interface InstagramPost {
+  id: string;
+  media_type: 'IMAGE' | 'VIDEO' | 'CAROUSEL_ALBUM';
+  media_url: string;
+  permalink: string;
+  thumbnail_url?: string;
+  username: string;
+  caption?: string;
+  children?: {
+    data: Array<{
+      id: string;
+      media_type: 'IMAGE' | 'VIDEO';
+      media_url: string;
+    }>;
+  };
+}

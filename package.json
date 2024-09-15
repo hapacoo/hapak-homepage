@@ -13,6 +13,8 @@
     "@apollo/client": "^3.11.4",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
+    "@react-three/drei": "7.27.0",
+    "@react-three/fiber": "7.0.29",
     "antd": "^5.20.2",
     "axios": "^1.7.5",
     "graphql": "^16.9.0",
@@ -20,13 +22,15 @@
     "next": "12",
     "react": "17",
     "react-dom": "17",
-    "recoil": "^0.7.7"
+    "recoil": "^0.7.7",
+    "three": "0.137.5"
   },
   "devDependencies": {
     "@types/instafeed.js": "^2.0.0",
     "@types/node": "^20",
     "@types/react": "^18.3.4",
     "@types/react-dom": "^18",
+    "@types/three": "^0.168.0",
     "eslint": "^9.9.1",
     "eslint-config-next": "14.2.6",
     "eslint-plugin-prettier": "^5.2.1",

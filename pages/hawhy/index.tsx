@@ -11,10 +11,5 @@ export const NAVIGATION_HAWHY: NavigationType[] = [
 export default function HawhyPage(): JSX.Element {
   const [isWho, setIsWho] = useRecoilState(isWhoState);
   setIsWho('HAWHY');
-  return (
-    <>
-      <div> cf======================================</div>
-      <button>0000</button>
-    </>
-  );
+  return <></>;
 }

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>Document</title>
+    <!-- es-module-shims -->
+    <script
+      async
+      src="https://ga.jspm.io/npm:es-module-shims@1.10.0/dist/es-module-shims.js"
+    ></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "../node_modules/three/build/three.module.js",
+          "three/examples/": "../node_modules/three/examples/",
+          "three/examples/jsm/controls/OrbitControls": "../node_modules/three/examples/jsm/controls/OrbitControls.js",
+          "three/examples/jsm/capabilities/WebGL": "../node_modules/three/examples/jsm/capabilities/WebGL.js"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <canvas id="result" style="width: 100%; height: 100%"></canvas>
+    <script src="./src/js/index.js" type="module"></script>
+  </body>
+</html>

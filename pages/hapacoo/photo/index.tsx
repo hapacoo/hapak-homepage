@@ -1,7 +1,11 @@
+import { useRecoilState } from 'recoil';
 import { IMasonryItem } from '../../../src/commons/types';
 import MasonryContainer from '../../../src/components/units/Masonry/Mansonry';
+import { isWhoState } from '../../../src/commons/stores';
 
 export default function HPCPhotoPage() {
+  const [isWho, setIsWho] = useRecoilState(isWhoState);
+  setIsWho('HAPACOO');
   const totalImages = 91;
 
   const generateItems = (): IMasonryItem[] => {
