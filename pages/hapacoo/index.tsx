@@ -1,6 +1,7 @@
 import { useRecoilState } from 'recoil';
 import { isWhoState } from '../../src/commons/stores';
 import { NavigationType } from '../../src/commons/types';
+import ImageGrid from '../../src/components/units/ImageGrid/ImageGrid';
 
 export const NAVIGATION_HAPACOO: NavigationType[] = [
   { name: 'DRAWING', page: '/HAPACOO/drawing' },
@@ -15,8 +16,7 @@ export default function HapacooPage(): JSX.Element {
 
   return (
     <>
-      <div> cf======================================</div>
-      <button>0000</button>
+      <ImageGrid />
     </>
   );
 }

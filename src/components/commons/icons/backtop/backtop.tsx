@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ArrowUpIcon, Button, IconWrapper } from './backtopStyle';
+import { Button } from './backtopStyle';
 import {} from '@emotion/react';
 
 const BackToTopButton = () => {
@@ -7,7 +7,7 @@ const BackToTopButton = () => {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
+      if (window.scrollY > 300) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -30,9 +30,7 @@ const BackToTopButton = () => {
     <>
       {isVisible && (
         <Button onClick={scrollToTop} className={isVisible ? 'show' : ''}>
-          <IconWrapper>
-            <ArrowUpIcon />
-          </IconWrapper>
+          TOP
         </Button>
       )}
     </>

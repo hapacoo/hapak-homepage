@@ -26,7 +26,7 @@ export const HeaderButton = styled.button<IMenuWorksStyleProps>`
   padding: 0;
   margin-right: 10px;
   color: #fff;
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: 900;
   -webkit-text-stroke: black 2px;
   background-color: transparent;
@@ -37,8 +37,18 @@ export const HeaderButton = styled.button<IMenuWorksStyleProps>`
   :hover {
     color: #000;
     text-shadow:
-      0px 0px 10px #a6f27d,
+      0px 0px 10px #f9c840,
       0px 0px 15px #a6f27d;
+  }
+  @media (max-width: 1440px) {
+    font-size: 4rem;
+  }
+  @media (max-width: 1024px) {
+    font-size: 2.8rem;
+  }
+
+  @media (max-width: 390px) {
+    font-size: 2.5rem;
   }
 `;
 

@@ -16,10 +16,10 @@ export const WrapperMenu = styled.nav<IWrapperMenuProps>`
   left: 0;
   transition: transform 0.3s ease-in-out;
 
-  @media (max-width: 576px) {
+  /* @media (max-width: 576px) {
     width: 100%;
     translate: -90px;
-  }
+  } */
 
   a {
     font-size: 3rem;
@@ -37,7 +37,7 @@ export const WrapperMenu = styled.nav<IWrapperMenuProps>`
     :hover {
       color: #000;
       text-shadow:
-        0px 0px 10px #a6f27d,
+        0px 0px 10px #f9c840,
         0px 0px 15px #a6f27d;
     }
 
@@ -45,5 +45,15 @@ export const WrapperMenu = styled.nav<IWrapperMenuProps>`
       font-size: 1.5rem;
       text-align: center;
     }
+  }
+  @media (max-width: 1440px) {
+    font-size: 4rem;
+  }
+  @media (max-width: 1024px) {
+    font-size: 3.5rem;
+  }
+
+  @media (max-width: 390px) {
+    font-size: 3rem;
   }
 `;

@@ -5,6 +5,6 @@ export const globalStyles = css`
     margin: 0px;
     box-sizing: border-box;
 
-    background-color: #f8f7f4;
+    background-color: #f2eddf;
   }
 `;

@@ -6,10 +6,10 @@ export const WrapperWho = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: transparent;
-  height: 100vh;
+  height: auto;
 `;
 
-export const MainWhoButton = styled.button`
+export const MainWhoButton = styled.img`
   width: 60px;
   height: 50px;
   margin-top: 5px;
@@ -21,26 +21,21 @@ export const MainWhoButton = styled.button`
   font-weight: 300;
   cursor: pointer;
   transition: transform 0.3s;
-
-  &:hover {
-    background-color: #000;
-    color: #fff;
-    box-shadow:
-      0px 0px 10px #a6f27d,
-      0px 0px 15px #a6f27d;
-  }
 `;
 
 export const SubWhoButton = styled.button`
-  width: 60px;
+  width: 100px;
   height: 50px;
-  margin-top: 10px;
+  margin-top: 15px;
   border-radius: 40%;
   border: none;
-  background-color: #a6f27d;
-  color: #000;
-  font-size: 10px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 15px;
   font-weight: 600;
+  text-align: center;
+  -webkit-text-stroke: black 1px;
+
   cursor: pointer;
   transition:
     transform 0.3s,
@@ -54,10 +49,6 @@ export const SubWhoButton = styled.button`
   }
 
   &:hover {
-    background-color: #000;
-    color: #fff;
-    box-shadow:
-      0px 0px 10px #a6f27d,
-      0px 0px 15px #a6f27d;
+    font-size: 20px;
   }
 `;

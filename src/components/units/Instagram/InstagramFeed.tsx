@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import * as S from './InstagramFeedStyle';
 import { InstagramPost } from '../../../commons/types';
+import BackToTopButton from '../../commons/icons/backtop/backtop';
 
 export const InstagramFeed: React.FC = () => {
   const [posts, setPosts] = useState<InstagramPost[]>([]);
@@ -72,6 +73,7 @@ export const InstagramFeed: React.FC = () => {
           </S.PostOverlay>
         </S.PostWrapper>
       ))}
+      <BackToTopButton />
     </S.Grid>
   );
 };

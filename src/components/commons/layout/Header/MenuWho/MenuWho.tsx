@@ -3,7 +3,7 @@ import { useRecoilState } from 'recoil';
 import { isWhoState } from '../../../../../commons/stores';
 import { MainWhoButton, SubWhoButton, WrapperWho } from './MenuWhoStyle';
 import { useRouter } from 'next/router';
-
+import MenuWhoImage from '../../../../../image/MenuWho.png';
 const MenuWhoButton: React.FC = () => {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +22,7 @@ const MenuWhoButton: React.FC = () => {
 
   return (
     <WrapperWho>
-      <MainWhoButton onClick={onClickOpen}>👤</MainWhoButton>
+      <MainWhoButton src="/image/icons/MenuWhoIcon.png" onClick={onClickOpen} />
       <SubWhoButton
         className={isOpen ? 'visible' : ''}
         onClick={() => onClickSubButton('HA_PAK')}

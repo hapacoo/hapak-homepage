@@ -25,7 +25,7 @@ export const FooterA = styled.a`
   display: inline-block;
   padding: 0;
   background-color: transparent;
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: 700;
   color: #fff;
   -webkit-text-stroke: black 1.5px;
@@ -38,5 +38,15 @@ export const FooterA = styled.a`
     text-shadow:
       0px 0px 10px #a6f27d,
       0px 0px 15px #a6f27d;
+  }
+  @media (max-width: 1440px) {
+    font-size: 4rem;
+  }
+  @media (max-width: 1024px) {
+    font-size: 2.8rem;
+  }
+
+  @media (max-width: 390px) {
+    font-size: 2.5rem;
   }
 `;

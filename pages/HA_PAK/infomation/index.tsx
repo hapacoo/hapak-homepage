@@ -1,13 +1,13 @@
 import styled from '@emotion/styled';
 
 const InfoDiv = styled.div`
-  width: 700px;
+  width: 60vw;
   height: auto;
   margin: 150px;
 `;
 const InfoP = styled.p`
   margin: 3px;
-  font-size: 20px;
+  font-size: 2vw;
   font-weight: 400;
 `;
 

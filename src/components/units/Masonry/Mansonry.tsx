@@ -1,4 +1,5 @@
 import { IMasonryContainerProps } from '../../../commons/types';
+import BackToTopButton from '../../commons/icons/backtop/backtop';
 import * as S from './MasonryStyle';
 
 const MasonryContainer: React.FC<IMasonryContainerProps> = ({ items }) => {
@@ -25,6 +26,7 @@ const MasonryContainer: React.FC<IMasonryContainerProps> = ({ items }) => {
           </S.MasonryItem>
         ))}
       </S.StyledMasonry>
+      <BackToTopButton />
     </S.MasonryWrapper>
   );
 };
