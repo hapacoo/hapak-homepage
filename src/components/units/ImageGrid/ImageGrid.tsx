@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { GridContainer, ImageContainer } from './ImageGridStyle';
+import { GridContainer, ImageContainer, Image } from './ImageGridStyle';
 
 const ImageGrid: React.FC = () => {
   const [hoverImage, setHoverImage] = useState<number | null>(null);
@@ -13,7 +13,7 @@ const ImageGrid: React.FC = () => {
         onMouseEnter={() => setHoverImage(index)}
         onMouseLeave={() => setHoverImage(null)}
       >
-        <img
+        <Image
           src="/image/icons/MenuWhoIcon.png"
           alt="placeholder"
           className="w-full h-full object-cover"

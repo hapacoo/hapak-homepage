@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { useRecoilState } from 'recoil';
 import { isWhoState } from '../../../src/commons/stores';
+import { useEffect } from 'react';
 
 const Wrapper = styled.div`
   display: flex;
@@ -29,7 +30,10 @@ const InfoImg = styled.img`
 
 export default function HPCInfoPage() {
   const [isWho, setIsWho] = useRecoilState(isWhoState);
-  setIsWho('HAPACOO');
+  useEffect(() => {
+    setIsWho('HAPACOO');
+  }, []);
+
   return (
     <>
       <Wrapper>

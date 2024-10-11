@@ -39,3 +39,7 @@ export const ImageContainer = styled.div<ImageContainerProps>`
     margin: 0.7rem;
   }
 `;
+
+export const Image = styled.img`
+  background-color: transparent;
+`;

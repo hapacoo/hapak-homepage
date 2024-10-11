@@ -2,10 +2,14 @@ import { useRecoilState } from 'recoil';
 import { IMasonryItem } from '../../../src/commons/types';
 import MasonryContainer from '../../../src/components/units/Masonry/Mansonry';
 import { isWhoState } from '../../../src/commons/stores';
+import { useEffect } from 'react';
 
 export default function HPCDrawingPage() {
   const [isWho, setIsWho] = useRecoilState(isWhoState);
-  setIsWho('HAPACOO');
+  useEffect(() => {
+    setIsWho('HAPACOO');
+  }, []);
+
   const totalImages = 144;
 
   const generateItems = (): IMasonryItem[] => {

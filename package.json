@@ -23,7 +23,8 @@
     "react": "17",
     "react-dom": "17",
     "recoil": "^0.7.7",
-    "three": "0.137.5"
+    "three": "0.137.5",
+    "uuid": "^10.0.0"
   },
   "devDependencies": {
     "@types/instafeed.js": "^2.0.0",
@@ -31,6 +32,7 @@
     "@types/react": "^18.3.4",
     "@types/react-dom": "^18",
     "@types/three": "^0.168.0",
+    "@types/uuid": "^10.0.0",
     "eslint": "^9.9.1",
     "eslint-config-next": "14.2.6",
     "eslint-plugin-prettier": "^5.2.1",

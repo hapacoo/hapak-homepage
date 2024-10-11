@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { isWhoState } from '../../../src/commons/stores';
 import { useRecoilState } from 'recoil';
+import { useEffect } from 'react';
 
 const InfoDiv = styled.div`
   width: 60%;
@@ -15,7 +16,10 @@ const InfoP = styled.p`
 
 export default function HWInfoPage() {
   const [isWho, setIsWho] = useRecoilState(isWhoState);
-  setIsWho('HAWHY');
+  useEffect(() => {
+    setIsWho('HAWHY');
+  }, []);
+
   return (
     <>
       <InfoDiv>

@@ -35,6 +35,7 @@ const ContentContainer: React.FC<IContentProps> = ({
       if (groupRef.current) {
         observer.unobserve(groupRef.current);
       }
+      observer.disconnect();
     };
   }, []);
 
